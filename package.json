@@ -3,6 +3,7 @@
   "version": "2.5.0",
   "description": "node's dgram API for react-native",
   "main": "UdpSockets.js",
+  "types": "lib/types/index.d.ts",
   "scripts": {
     "start": "exit 1",
     "test": "mocha"
