@@ -49,6 +49,21 @@ export default class UdpSocket extends EventEmitter {
    * @param {any[]} args
    */
   bind(...args: any[]): void;
+
+  /**
+   * Start receiving messages. This must be called after the socket is bound.
+   *
+   * Example:
+   * let udpClient = dgram.createSocket('udp4')
+   * this.udpClient.on('bound', () => {
+   *  this.udpClient.setBroadcast(true)
+   *  this.udpClient.startReceiving()
+   * })
+   * udpClient.bind()
+   *
+   * @param {any[]} args
+   */
+  startReceiving(): void;
   /**
    * Close the underlying socket and stop listening for data on it. If a callback is provided,
    * it is added as a listener for the `'close'` event.
